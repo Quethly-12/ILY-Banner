@@ -1,0 +1,48 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Love You Bubble</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f8ff; /* Light background color */
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+        }
+        .bubble {
+            background-color: #ff69b4; /* Pink bubble color */
+            border-radius: 25px;
+            padding: 20px 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            position: relative;
+            font-size: 24px;
+            color: white;
+            text-align: center;
+            animation: float 2s ease-in-out infinite;
+        }
+        .bubble:after {
+            content: '';
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -10px; /* Half the width of the triangle */
+            border-width: 10px;
+            border-style: solid;
+            border-color: transparent transparent #ff69b4 transparent; /* Triangle color */
+        }
+        @keyframes float {
+            0% { transform: translatey(0); }
+            50% { transform: translatey(-10px); }
+            100% { transform: translatey(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="bubble">I LOVE YOU</div>
+</body>
+</html>
